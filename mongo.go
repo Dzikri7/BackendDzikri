@@ -310,10 +310,6 @@ func UpdatedLinestring(mongoconn *mongo.Database, collection string, filter bson
 	return atdb.ReplaceOneDoc(mongoconn, collection, filter, linestringdata)
 }
 
-func PostLinestringg(mongoconn *mongo.Database, collection string, linestringdata GeoJsonLineString) interface{} {
-	return atdb.InsertOneDoc(mongoconn, collection, linestringdata)
-}
-
 func PostPolygone(mongoconn *mongo.Database, collection string, polygonedata GeoJsonPolygon) interface{} {
 	return atdb.InsertOneDoc(mongoconn, collection, polygonedata)
 }
